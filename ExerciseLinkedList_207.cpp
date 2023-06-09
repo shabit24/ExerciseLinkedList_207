@@ -26,7 +26,7 @@ public:
 };
 
 void CircularLinkedList::addNode() {
-    // a) Beginning of the list
+    //  Beginning of the list
     Node* newnode = new Node;
     cout << "Enter roll number: ";
     cin >> newnode->rollNumber;
@@ -56,7 +56,7 @@ void CircularLinkedList::addNode() {
     newnode->next = current;
     
 
-    // c) End of the list
+    //  End of the list
     
     Node* newnode = new Node;
     cout << "Enter roll number: ";
@@ -108,11 +108,12 @@ bool CircularLinkedList::delNode() {
     Node* current = NULL;
 
     if (search(rollno, &previous, &current)) {
-        // a) Beginning of the list
+        //  Beginning of the list
         if (current == LAST && current->next == LAST) {
             LAST = NULL;
             delete current;
         }
+
         else {
             Node* temp = LAST->next;
 
@@ -164,7 +165,7 @@ int main() {
             cout << "2. Delete a record from the list" << endl;
             cout << "3. View all the records in the list" << endl;
             cout << "4. Exit" << endl;
-            cout << "\nEnter your choice (1-5): ";
+            cout << "\nEnter your choice (1-4): ";
             char ch;
             cin >> ch;
 
